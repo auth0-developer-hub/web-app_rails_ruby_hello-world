@@ -1,0 +1,65 @@
+<footer class="page-footer">
+  <div class="page-footer-grid">
+    <div class="page-footer-grid__info">
+      <div class="page-footer-info__message">
+        <p class="page-footer-message__headline">
+          <span>This sample application is brought to you by&nbsp;</span>
+          <%= render 'layouts/partials/page_footer_hyperlink', path:"https://auth0.com/" do %>Auth0<% end %>
+        </p>
+        <p class="page-footer-message__description">
+          <%= render 'layouts/partials/page_footer_hyperlink', path:"https://auth0.com/docs/quickstarts/" do%>
+            <span>Securely implement authentication using Auth0 on any stack and any device</span>
+            <u>in less than 10 minutes</u>
+          <% end %>
+        </p>
+      </div>
+      <div class="page-footer-info__button">
+        <a
+          id="create-account-button"
+          href="https://auth0.com/signup"
+          class="button button--secondary"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Create Free Auth0 Account
+        </a>
+      </div>
+      <div class="page-footer-info__resource-list">
+        <div class="page-footer-info__resource-list-item" >
+          <%= render 'layouts/partials/page_footer_hyperlink', path:"https://auth0.com/why-auth0/" do%>
+            Why Auth0
+          <% end %>
+        </div>
+        <div class="page-footer-info__resource-list-item" >
+          <%= render 'layouts/partials/page_footer_hyperlink', path:"https://auth0.com/docs/get-started" do%>
+            How It Works
+          <% end %>
+        </div>
+        <div class="page-footer-info__resource-list-item" >
+          <%= render 'layouts/partials/page_footer_hyperlink', path:"https://auth0.com/blog/developers/" do%>
+            Developer Blog
+          <% end %>
+        </div>
+        <div class="page-footer-info__resource-list-item" >
+          <%= render 'layouts/partials/page_footer_hyperlink', path:"https://auth0.com/contact-us" do%>
+            Contact an Expert
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="page-footer-grid__brand">
+      <div class="page-footer-brand">
+        <img
+          class="page-footer-brand__logo"
+          src="https://cdn.auth0.com/blog/hello-auth0/auth0-shield.svg"
+          alt="Auth0"
+          width="20"
+          height="22.22"
+        />
+        <%= render 'layouts/partials/page_footer_hyperlink', path:"https://auth0.com/" do %>
+          Auth0 Inc
+        <% end %>
+      </div>
+    </div>
+  </div>
+</footer>

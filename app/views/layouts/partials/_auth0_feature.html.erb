@@ -1,0 +1,9 @@
+<%= link_to(resource[:resource_url], class: 'auth0-feature', target: "_blank", rel: "noopener noreferrer") do %>
+  <h3 class="auth0-feature__headline">
+    <%= image_tag "#{resource[:icon]}", class: "auth0-feature__icon" %>
+    <%= resource[:title] %>
+  </h3>
+  <p class="auth0-feature__description">
+    <%= resource[:description] %>
+  </p>
+<% end %>

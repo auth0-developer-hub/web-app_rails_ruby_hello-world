@@ -1,0 +1,14 @@
+<div class="content-layout">
+  <h1 id="page-title" class="content__title">Public Page</h1>
+  <div class="content__body">
+    <p id="page-description">
+      <span>
+        This page retrieves a <strong>public message</strong>.
+      </span>
+      <span>
+        <strong>Any visitor can access this page.</strong>
+      </span>
+    </p>
+    <%= render partial: "layouts/partials/code_snippet", locals: { title: "Public Message", code: @message.pretty_json } %>
+  </div>
+</div>

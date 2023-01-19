@@ -1,0 +1,22 @@
+<div class="content-layout">
+  <h1 id="page-title" class="content__title">Profile Page</h1>
+  <div class="content__body">
+    <p id="page-description">
+      <span>
+        <strong>Only authenticated users should access this page.</strong>
+      </span>
+    </p>
+    <div class="profile-grid">
+      <div class="profile__header">
+        <%= image_tag("#{@user.picture}", class: "profile__avatar", alt: "Profile") %>
+        <div class="profile__headline">
+          <h2 class="profile__title"><%= @user.name %></h2>
+          <span class="profile__description"><%= @user.email %></span>
+        </div>
+      </div>
+      <div class="profile__details">
+        <%= render partial: "layouts/partials/code_snippet", locals: { title: "User Profile Object", code: @user.pretty_json } %> 
+      </div>
+    </div>
+  </div>
+</div>
