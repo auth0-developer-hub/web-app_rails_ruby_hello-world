@@ -28,9 +28,12 @@ module WebAppRailsRubyHelloWorldInternalPrototypeTemp
 
     # Don't generate system test files.
     config.generators.system_tests = nil
-    config.exceptions_app = routes
 
     config.logger = Logger.new($stdout)
     config.logger = ActiveSupport::Logger.new("log/#{Rails.env}.log")
+
+    config.exceptions_app = routes
+
+    config.cache_store = :memory_store
   end
 end

@@ -6,7 +6,7 @@
         This page retrieves a <strong>protected message</strong>.
       </span>
       <span>
-        <strong>Only authenticated users should access this page.</strong>
+        <strong>Only authenticated users can access this page.</strong>
       </span>
     </p>
     <%= render partial: "layouts/partials/code_snippet", locals: { title: "Protected Message", code: @message.pretty_json } %> 
