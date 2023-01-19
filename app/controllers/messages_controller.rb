@@ -12,6 +12,6 @@ class MessagesController < ApplicationController
   end
 
   def admin
-    @message = MessagesService.call(Message::ADMIN)
+    @message = MessagesService.call(Message::ADMIN, session[:credentials][:access_token])
   end
 end
