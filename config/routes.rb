@@ -3,6 +3,16 @@
 Rails.application.routes.draw do
   root 'home#index'
 
+  # Auth0 routes
+  scope :auth do
+    get 'failure' => 'auth0#failure'
+
+    scope :auth0 do
+      get 'callback' => 'auth0#callback'
+      get 'logout' => 'auth0#logout'
+    end
+  end
+
   get 'protected', to: 'messages#protected'
   get 'public', to: 'messages#public'
   get 'admin', to: 'messages#admin'

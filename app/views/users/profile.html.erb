@@ -3,7 +3,11 @@
   <div class="content__body">
     <p id="page-description">
       <span>
-        <strong>Only authenticated users should access this page.</strong>
+        You can use the <strong>ID Token</strong> to get the profile information
+        of an authenticated user.
+      </span>
+      <span>
+        <strong>Only authenticated users can access this page.</strong>
       </span>
     </p>
     <div class="profile-grid">
@@ -15,7 +19,7 @@
         </div>
       </div>
       <div class="profile__details">
-        <%= render partial: "layouts/partials/code_snippet", locals: { title: "User Profile Object", code: @user.pretty_json } %> 
+        <%= render partial: "layouts/partials/code_snippet", locals: { title: "Decoded ID Token", code: @user.pretty_json } %> 
       </div>
     </div>
   </div>
