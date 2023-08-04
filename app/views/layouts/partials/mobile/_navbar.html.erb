@@ -1,0 +1,21 @@
+<div class="mobile-nav-bar__container">
+  <nav id="mobile-nav-bar" class="mobile-nav-bar">
+    <div class="mobile-nav-bar__brand">
+      <%= link_to root_path do %>
+        <img
+          class="mobile-nav-bar__logo"
+          src="https://cdn.auth0.com/blog/hub/code-samples/hello-world/auth0-logo.svg"
+          alt="Auth0 shield logo"
+          width="82"
+          height="24"
+        />
+      <% end %>
+    </div>
+    <span class="mobile-nav-bar__toggle material-icons" id="mobile-menu-toggle-button">
+      menu
+    </span>
+    <div class="mobile-nav-bar__menu mobile-nav-bar__menu--closed" id="mobile-menu">
+      <%= render partial: "layouts/partials/navbar_tabs", locals: { nav_bar_class: "mobile-nav-bar__tabs", nav_bar_tab_class: "mobile-nav-bar__tab" } %> 
+    </div>
+  </nav>
+</div>
